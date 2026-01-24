@@ -1,0 +1,160 @@
+{
+  "name": "AI Empire Studio",
+  "overview": "AI Empire Studio is a specialized training and digital resource hub, dedicated to demystifying generative AI for those at the starting line. The company bridges the gap between complex technology and practical application, providing a clear \"blueprint\" for individuals to transition from beginners to proficient ",
+  "websiteUrl": "https://cdn.dribbble.com/userupload/46458194/file/5d37ec3e77a4a559bbaf4d2413541f89.png?resize\u003d752x\u0026vertical\u003dcenter",
+  "brandValues": ["Creativity", "Professionalism", "AI Awarness"],
+  "visualAesthetics": ["Neo-Noir \u0026 Cyberpunk", "Chrome-morphism", "Light-Streaks \u0026 Kinetic Energy", "Hard-Surface Modeling:", "Ray-Tracing \u0026 Global Illumination"],
+  "toneOfVoice": ["Authoritative", "Clinical", "Reassuring", "Direct"],
+  "fonts": ["Roboto Slab", "Roboto"],
+  "campaigns": [{
+    "creatives": [{
+      "title": "The Science of Crypto Investing",
+      "versions": [{
+        "fileName": "resource_b_jerC1ulaPbY6SlE2JORe.png"
+      }]
+    }, {
+      "title": "Targeted Efficacy: Salicylic Acid",
+      "versions": [{
+        "fileName": "resource_8Mq0_GewaJG18NXEJCNOiO.png"
+      }]
+    }, {
+      "title": "Refining Returns: Glycolic Acid",
+      "versions": [{
+        "fileName": "resource_a5s3bNExMXo09ZHL0sF_mz.png"
+      }]
+    }, {
+      "title": "REJUVENATE Your Strategy",
+      "versions": [{
+        "fileName": "resource_8pQREpg4UJneTdLvFITOtT.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "The Science of Brighter Skin",
+      "versions": [{
+        "fileName": "resource_8pL6ygrY25Z4mKqYyxK4bh.png"
+      }]
+    }, {
+      "title": "Glycolic Acid: Exfoliate",
+      "versions": [{
+        "fileName": "resource_aD4GaIpEgCb4DHGotVgOHm.png"
+      }]
+    }, {
+      "title": "Salicylic Acid: Purify",
+      "versions": [{
+        "fileName": "resource_boRcOlmFAKq9Rh6DiM6_74.png"
+      }]
+    }, {
+      "title": "Visibly Transform Skin",
+      "versions": [{
+        "fileName": "resource_88VaiqdaCTk607vimFhOih.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "Stop The AI Overload.",
+      "versions": [{
+        "fileName": "resource_b_EdB_p5XdN0M5ViZeP4x8.png"
+      }]
+    }, {
+      "title": "Stop The AI Overload."
+    }, {
+      "title": "Tired of the Jargon?",
+      "versions": [{
+        "fileName": "resource_9W0XcT0MHa-9m_MmPZy4hE.png"
+      }]
+    }, {
+      "title": "Tired of the Jargon?"
+    }, {
+      "title": "Get The Quickstart.",
+      "versions": [{
+        "fileName": "resource_9v99rXEjjcK9LwdqjDdkqK.png"
+      }]
+    }, {
+      "title": "Get The Quickstart."
+    }, {
+      "title": "48 Hours ONLY.",
+      "versions": [{
+        "fileName": "resource_aaGJbzZRNhL3z7b04s-4pi.png"
+      }]
+    }, {
+      "title": "48 Hours ONLY."
+    }, {
+      "title": "Unclog Your Neural Path",
+      "versions": [{
+        "fileName": "resource_bz_EIfxsUWT66MjyeLf4Ld.png"
+      }]
+    }, {
+      "title": "Stop The AI Overload.",
+      "versions": [{
+        "fileName": "resource_9xAyB26UssC8vEL4yeg4ih.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "Master AI. Secure Your Edge.",
+      "versions": [{
+        "fileName": "resource_a1DKnoQ_Vt615bqX_qYkS6.png"
+      }]
+    }, {
+      "title": "Don\u0027t Just Compete. Lead.",
+      "versions": [{
+        "fileName": "resource_aU2CHw7bQY-9HJLEerS4c3.png"
+      }]
+    }, {
+      "title": "Expert AI Training, Defined.",
+      "versions": [{
+        "fileName": "resource_9zAiiNErUIJ5ByfPGZT4zk.png"
+      }]
+    }, {
+      "title": "Validate Your Skills Now.",
+      "versions": [{
+        "fileName": "resource_9m5u_D62JfY3HZnAl9Y_Ik.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "The Science of Smarter Crypto",
+      "versions": [{
+        "fileName": "resource_b_U1ysb04Ad82tiLK3o_Zv.png"
+      }]
+    }, {
+      "title": "Expert Managed Portfolios",
+      "versions": [{
+        "fileName": "resource_awIwpkzFk2b6t0-bIuF4Vl.png"
+      }]
+    }, {
+      "title": "Practice Makes Perfect Trading",
+      "versions": [{
+        "fileName": "resource_8JX-4jTZfO13o4gfQpT_5b.png"
+      }]
+    }, {
+      "title": "Lightning Fast Transactions",
+      "versions": [{
+        "fileName": "resource_9Rk_DIXmLL-4zd-1lbD479.png"
+      }]
+    }]
+  }, {
+    "creatives": [{
+      "title": "Your AI Business Blueprint",
+      "versions": [{
+        "fileName": "resource_br_Ogfu2JSg3bwtAFqSkPP.png"
+      }]
+    }, {
+      "title": "Step 1: Find Your Focus",
+      "versions": [{
+        "fileName": "resource_86h8t4Xioto6daG-TrUOjq.png"
+      }]
+    }, {
+      "title": "Step 2: Build The Engine",
+      "versions": [{
+        "fileName": "resource_bXj8ETzTJnh31xZAn7uk54.png"
+      }]
+    }, {
+      "title": "Step 3: Profit \u0026 Scale",
+      "versions": [{
+        "fileName": "resource_8-flBSXh2-TfXn-ouTw452.png"
+      }]
+    }]
+  }]
+}

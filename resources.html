@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Empire Studio - The Toolkit</title>
+    <link rel="stylesheet" href="empire-master.css?v=1">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">AI Empire Studio</a>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="btn-neon nav-cta open-modal">Get Quickstart</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="training.html" class="nav-link">Training</a>
+            <a href="resources.html" class="nav-link" style="color: var(--color-accent-cyan);">Resources</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="page-header" style="text-align: center; padding: 4rem 2rem;">
+            <h1 class="reveal">The Toolkit</h1>
+            <p class="reveal" style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">
+                Open source intel and tactical assets. Free for all operatives. Initialize download to acquire.
+            </p>
+        </section>
+
+        <section class="store-grid reveal">
+            <!-- Resource 2 -->
+            <article class="product-card resource">
+                <div class="card-badge free">Clearance Granted</div>
+                <h3>Master Prompt Library</h3>
+                <p>A curated collection of 50+ high-fidelity prompts for Midjourney, ChatGPT, and Claude.</p>
+                <div class="product-features">
+                    <ul>
+                        <li>Cinematic Prompts</li>
+                        <li>Coding Assistants</li>
+                        <li>Marketing Copy</li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn-neon open-modal" style="width: 100%;"
+                        data-file="master-prompt-library.pdf">Download Signal</button>
+                </div>
+            </article>
+
+            <!-- Resource 3 -->
+            <article class="product-card resource">
+                <div class="card-badge free">Clearance Granted</div>
+                <h3>Empire Notion Template</h3>
+                <p>Organize your AI projects with this free dashboard structure. The foundation of your digital HQ.</p>
+                <div class="product-features">
+                    <ul>
+                        <li>Project Tracker</li>
+                        <li>Asset Library</li>
+                        <li>Client CRM</li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn-neon open-modal" style="width: 100%;" data-file="empire-template.zip">Duplicate
+                        Template</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>AI Empire Studio</h4>
+                <p>Demystifying generative AI for the modern professional. Build your empire with clarity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Our Values</h4>
+                <ul>
+                    <li>Creativity</li>
+                    <li>Professionalism</li>
+                    <li>AI Awareness</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:Admin@aiempirestudio.com">Admin@aiempirestudio.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 AI Empire Studio. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Quickstart Modal (Handles all downloads for now) -->
+    <div id="quickstart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Access Requested</h2>
+            <p>Enter your neural signal (email) to decrypt and download the Quickstart Guide.</p>
+            <form class="neo-form" style="border: none; padding: 0;">
+                <div class="form-group" style="text-align: left;">
+                    <label for="modal-name">Identifier (Name)</label>
+                    <input type="text" id="modal-name" required placeholder="Director Name">
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="modal-email">Email Address</label>
+                    <input type="email" id="modal-email" required placeholder="director@example.com">
+                </div>
+                <button type="submit" class="btn-neon" style="width: 100%;">Initialize Download</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

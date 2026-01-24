@@ -1,0 +1,17 @@
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (Future Proofing)
+node_modules/
+dist/
+build/
