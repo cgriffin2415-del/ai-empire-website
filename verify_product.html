@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopify Product Verification</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #111;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .status {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .success {
+            background: #1e4620;
+            border: 1px solid #4caf50;
+        }
+
+        .error {
+            background: #4a1c1c;
+            border: 1px solid #f44336;
+        }
+
+        pre {
+            background: #222;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shopify Product Diagnostic</h1>
+    <div id="results"></div>
+
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+    <script>
+        const client = ShopifyBuy.buildClient({
+            domain: 'iecivh-ff.myshopify.com',
+            storefrontAccessToken: 'c1aaaf72c5b92ce4e31c1290ca5fd948',
+        });
+
+        const productsToCheck = [
+            { name: "Quick Start Guide (Failing)", id: '9756408217765' },
+            { name: "Prompt Suite (Working)", id: '9770421682341' }
+        ];
+
+        const resultsDiv = document.getElementById('results');
+
+        productsToCheck.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'status';
+            div.innerHTML = `<h3>Checking ${item.name}...</h3><p>ID: ${item.id}</p>`;
+            resultsDiv.appendChild(div);
+
+            client.product.fetch(item.id).then((product) => {
+                console.log(item.name, product);
+                if (product) {
+                    div.classList.add('success');
+                    div.innerHTML += `
+                        <p><strong>Ref Code:</strong> ${product.id}</p>
+                        <p><strong>Title:</strong> ${product.title}</p>
+                        <p><strong>Available:</strong> ${product.availableForSale}</p>
+                        <p><strong>Description:</strong> ${product.description ? product.description.substring(0, 50) + '...' : 'N/A'}</p>
+                    `;
+                } else {
+                    div.classList.add('error');
+                    div.innerHTML += `<p><strong>Error:</strong> Product Not Found (null returned). The ID might be incorrect or the product is not active/available to the Buy Button channel.</p>`;
+                }
+            }).catch(err => {
+                console.error(item.name, err);
+                div.classList.add('error');
+                div.innerHTML += `<p><strong>Error:</strong> ${err.message}</p>`;
+            });
+        });
+    </script>
+</body>
+
+</html>

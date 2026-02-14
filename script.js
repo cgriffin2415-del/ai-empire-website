@@ -77,34 +77,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalForm) {
         modalForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
             const btn = modalForm.querySelector("button");
             const originalText = btn.innerText;
 
-            // 1. Simulate Processing
-            btn.innerText = "Decrypting Signal...";
+            const nameInput = document.getElementById('modal-name');
+            const emailInput = document.getElementById('modal-email');
+
+            const name = nameInput.value;
+            const email = emailInput.value;
+
+            // 1. UI Feedback
+            btn.innerText = "Connecting to Neural Network...";
             btn.style.opacity = "0.7";
+            btn.disabled = true;
 
-            setTimeout(() => {
-                // 2. Trigger Download
-                // In a real app, this would be a response from the server.
-                // Here we just point to the downloads folder.
-                const downloadLink = document.createElement("a");
-                downloadLink.href = `downloads/${targetFile}`;
-                downloadLink.download = targetFile; // Suggest filename
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
-
-                // 3. Reset UI
-                btn.innerText = "Download Initialized";
-                setTimeout(() => {
-                    modal.classList.remove("show");
-                    btn.innerText = originalText;
+            // 2. Call Netlify Function
+            fetch('/.netlify/functions/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email })
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // 3. Success: Redirect
+                        window.location.href = "thank_you.html";
+                    } else {
+                        throw new Error('Subscription failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    btn.innerText = "Connection Failed. Try Again.";
                     btn.style.opacity = "1";
-                    modalForm.reset();
-                }, 1500);
-
-            }, 1500); // 1.5s delay
+                    btn.disabled = false;
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                    }, 3000);
+                    alert("There was an issue connecting to the mainframe. Please check your signal (internet) and try again.");
+                });
         });
     }
 

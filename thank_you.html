@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Empire Studio - Connection Established</title>
+    <link rel="stylesheet" href="empire-master.css?v=1">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #1a1a2e 0%, var(--color-bg-dark) 100%);
+        }
+
+        .thank-you-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .confirmation-section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .next-step-section {
+            margin-bottom: 4rem;
+            width: 100%;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .authority-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+        }
+
+        .subtext {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reassurance {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.5rem;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scaleX(1);
+                opacity: 0.5;
+                box-shadow: 0 0 0 transparent;
+            }
+
+            50% {
+                transform: scaleX(1.5);
+                opacity: 1;
+                box-shadow: 0 0 10px var(--color-accent-cyan);
+            }
+
+            100% {
+                transform: scaleX(1);
+                opacity: 0.5;
+                box-shadow: 0 0 0 transparent;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            width: 100px;
+            background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);
+            margin: 0 auto 3rem;
+            opacity: 0.5;
+            animation: heartbeat 2s infinite ease-in-out;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-accent-purple);
+            color: #fff;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1.2rem 3rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(122, 28, 255, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            background: #9d4eff;
+            box-shadow: 0 0 30px rgba(122, 28, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .authority-section h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .authority-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .authority-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .authority-section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent-cyan);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thank-you-container">
+        <!-- SECTION 1 – Confirmation -->
+        <div class="confirmation-section">
+            <h1>Your Beginner Kit Is On Its Way.</h1>
+            <p class="subtext">Check your inbox for the AI Empire Beginner Kit and your first training email.</p>
+            <p class="reassurance">If you don’t see it, check your spam or promotions folder.</p>
+        </div>
+
+        <div class="divider"></div>
+
+
+        <!-- SECTION 2 – Immediate Next Step -->
+        <div class="next-step-section">
+            <h2>Ready to Move Beyond Guesswork?</h2>
+            <p class="subtext">The Beginner Kit gives you clarity. The AI Quickstart gives you a structured system to
+                produce consistent AI results.</p>
+            <!-- Shopify Buy Button Container -->
+            <div id='product-component-thankyou-quickstart'></div>
+
+            <style>
+                /* Force centering on the generated Shopify iframe/component */
+                #product-component-thankyou-quickstart,
+                #product-component-thankyou-quickstart iframe,
+                #product-component-thankyou-quickstart>div {
+                    display: block !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    max-width: 100% !important;
+                }
+            </style>
+
+            <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                    if (window.ShopifyBuy) {
+                        if (window.ShopifyBuy.UI) {
+                            ShopifyBuyInit();
+                        } else {
+                            loadScript();
+                        }
+                    } else {
+                        loadScript();
+                    }
+                    function loadScript() {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.src = scriptURL;
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                        script.onload = ShopifyBuyInit;
+                    }
+                    function ShopifyBuyInit() {
+                        var client = ShopifyBuy.buildClient({
+                            domain: 'iecivh-ff.myshopify.com',
+                            storefrontAccessToken: 'c1aaaf72c5b92ce4e31c1290ca5fd948',
+                        });
+                        ShopifyBuy.UI.onReady(client).then(function (ui) {
+                            ui.createComponent('product', {
+                                id: '9756408217765',
+                                node: document.getElementById('product-component-thankyou-quickstart'),
+                                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                                options: {
+                                    "product": {
+                                        "styles": {
+                                            "product": {
+                                                "text-align": "center",
+                                                "margin-left": "auto",
+                                                "margin-right": "auto"
+                                            },
+                                            "button": {
+                                                "font-family": "Roboto Slab, serif",
+                                                "font-weight": "700",
+                                                "font-size": "1.1rem",
+                                                "padding-top": "1.2rem",
+                                                "padding-bottom": "1.2rem",
+                                                "padding-left": "3rem",
+                                                "padding-right": "3rem",
+                                                "color": "#fff",
+                                                ":hover": {
+                                                    "background-color": "#9d4eff",
+                                                    "box-shadow": "0 0 30px rgba(122, 28, 255, 0.5)",
+                                                    "transform": "translateY(-2px)"
+                                                },
+                                                "background-color": "#7a1cff",
+                                                ":focus": {
+                                                    "background-color": "#9d4eff"
+                                                },
+                                                "border-radius": "4px",
+                                                "text-transform": "uppercase",
+                                                "letter-spacing": "0.1em",
+                                                "border": "1px solid rgba(255, 255, 255, 0.2)",
+                                                "box-shadow": "0 0 20px rgba(122, 28, 255, 0.3)",
+                                                "transition": "all 0.3s ease",
+                                                "display": "block",
+                                                "margin-left": "auto",
+                                                "margin-right": "auto"
+                                            }
+                                        },
+                                        "buttonDestination": "checkout",
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": false,
+                                            "title": false,
+                                            "price": false,
+                                            "description": false,
+                                            "button": true
+                                        },
+                                        "text": {
+                                            "button": "Start Your AI Training"
+                                        }
+                                    },
+                                    "productSet": {
+                                        "styles": {
+                                            "products": {
+                                                "@media (min-width: 601px)": {
+                                                    "margin-left": "-20px"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "modalProduct": {
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "button": false,
+                                            "buttonWithQuantity": true
+                                        },
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0px",
+                                                    "margin-bottom": "0px"
+                                                }
+                                            }
+                                        },
+                                        "text": {
+                                            "button": "Add to cart"
+                                        }
+                                    },
+                                    "option": {},
+                                    "cart": {
+                                        "text": {
+                                            "total": "Subtotal",
+                                            "button": "Checkout"
+                                        }
+                                    },
+                                    "toggle": {}
+                                }
+                            });
+                        });
+                    }
+                })();
+                /*]]>*/
+            </script>
+            <p class="reassurance" style="margin-top: 1rem;">Beginner-friendly. One-time purchase. Instant access.</p>
+        </div>
+
+        <!-- SECTION 3 – Subtle Authority Reinforcement -->
+        <div class="authority-section">
+            <h3>What Happens Next?</h3>
+            <ul>
+                <li>You’ll receive your Beginner Kit immediately</li>
+                <li>Over the next few days, you’ll learn how to structure AI correctly</li>
+                <li>When you're ready, the full AI Empire training path is available</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>AI Empire Studio<br>Structured AI Training for New Operators</p>
+    </footer>
+
+</body>
+
+</html>
