@@ -1,4 +1,5 @@
-const fetch = require('node-fetch');
+// Use dynamic import for node-fetch or fallback to global fetch
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args)).catch(() => global.fetch(...args));
 
 exports.handler = async (event, context) => {
     // Only allow POST requests

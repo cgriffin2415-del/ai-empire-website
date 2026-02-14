@@ -1,0 +1,9 @@
+{
+  "name": "ai-empire-website",
+  "version": "1.0.0",
+  "description": "AI Empire Website with Netlify Functions",
+  "main": "index.html",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
