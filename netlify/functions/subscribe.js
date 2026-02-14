@@ -20,6 +20,16 @@ exports.handler = async (event, context) => {
 
         console.log(`Subscribing ${email} to Beehiiv Pub ID: ${BEEHIIV_PUB_ID}`);
 
+
+        const toTitleCase = (str) => {
+            return str.replace(
+                /\w\S*/g,
+                (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+            );
+        };
+
+        const formattedName = name ? toTitleCase(name) : '';
+
         const response = await fetch(BEEHIIV_URL, {
             method: 'POST',
             headers: {
@@ -39,7 +49,7 @@ exports.handler = async (event, context) => {
                 custom_fields: [
                     {
                         name: 'Name',
-                        value: name || ''
+                        value: formattedName
                     }
                 ]
             })
