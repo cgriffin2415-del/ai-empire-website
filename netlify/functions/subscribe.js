@@ -30,6 +30,25 @@ exports.handler = async (event, context) => {
 
         const formattedName = name ? toTitleCase(name) : '';
 
+        const payload = {
+            email: email,
+            reactivate_existing: false,
+            send_welcome_email: true,
+            utm_source: 'AI Empire Website',
+            utm_medium: 'organic',
+            utm_campaign: 'beginner_kit_lead',
+            tier: 'free',
+            tags: ['beginner_kit_lead'],
+            custom_fields: [
+                {
+                    name: 'Name',
+                    value: formattedName
+                }
+            ]
+        };
+
+        console.log('Sending Payload to Beehiiv:', JSON.stringify(payload, null, 2));
+
         const response = await fetch(BEEHIIV_URL, {
             method: 'POST',
             headers: {
@@ -37,22 +56,7 @@ exports.handler = async (event, context) => {
                 'Authorization': `Bearer ${BEEHIIV_API_KEY}`,
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({
-                email: email,
-                reactivate_existing: false,
-                send_welcome_email: true,
-                utm_source: 'AI Empire Website',
-                utm_medium: 'organic',
-                utm_campaign: 'beginner_kit_lead',
-                tier: 'free',
-                tags: ['beginner_kit_lead'],
-                custom_fields: [
-                    {
-                        name: 'Name',
-                        value: formattedName
-                    }
-                ]
-            })
+            body: JSON.stringify(payload)
         });
 
         console.log(`Beehiiv API Status: ${response.status} ${response.statusText}`);
