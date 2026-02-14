@@ -18,6 +18,8 @@ exports.handler = async (event, context) => {
         const BEEHIIV_PUB_ID = process.env.BEEHIIV_PUBLICATION_ID;
         const BEEHIIV_URL = `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`;
 
+        console.log(`Subscribing ${email} to Beehiiv Pub ID: ${BEEHIIV_PUB_ID}`);
+
         const response = await fetch(BEEHIIV_URL, {
             method: 'POST',
             headers: {
@@ -43,7 +45,9 @@ exports.handler = async (event, context) => {
             })
         });
 
+        console.log(`Beehiiv API Status: ${response.status} ${response.statusText}`);
         const data = await response.json();
+        console.log('Beehiiv API Response Body:', JSON.stringify(data, null, 2));
 
         if (response.ok) {
             return {
