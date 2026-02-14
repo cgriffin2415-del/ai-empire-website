@@ -45,7 +45,7 @@ exports.handler = async (event, context) => {
                 utm_medium: 'organic',
                 utm_campaign: 'beginner_kit',
                 tier: 'free',
-                tags: ['Beginner_Kit_Lead'],
+                tags: ['beginner_kit_lead'],
                 custom_fields: [
                     {
                         name: 'Name',
