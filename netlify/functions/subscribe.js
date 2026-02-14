@@ -43,7 +43,7 @@ exports.handler = async (event, context) => {
                 send_welcome_email: true,
                 utm_source: 'AI Empire Website',
                 utm_medium: 'organic',
-                utm_campaign: 'beginner_kit',
+                utm_campaign: 'beginner_kit_lead',
                 tier: 'free',
                 tags: ['beginner_kit_lead'],
                 custom_fields: [
