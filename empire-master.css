@@ -392,6 +392,11 @@
   cursor: pointer;
 }
 
+.form-group select option {
+  background-color: var(--color-bg-dark);
+  color: #fff;
+}
+
 /* Modal Popup */
 .modal {
   display: none;
